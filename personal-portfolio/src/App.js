@@ -7,13 +7,13 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { UNSD } from "../src/components/UNSD";
+import  UDomain  from "./components/UDomain";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <UNSD/>
+      {/* <UDomain/> */}
       <Banner />
       <Skills />
       <Projects />

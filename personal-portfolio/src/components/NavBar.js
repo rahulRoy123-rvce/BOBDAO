@@ -8,7 +8,7 @@ import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
-import UNSD from "../UNSD"
+import UDomain from "../components/UDomain"
 
 export const NavBar = () => {
 
@@ -52,13 +52,13 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
+              {/* <a href="#"><img src={navIcon1} alt="" /></a>
                 <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+                <a href="#"><img src={navIcon3} alt="" /></a> */}
               </div>
-              {/* <HashLink to='#connect'> */}
-                <UNSD/>
-              {/* </HashLink> */}
+              <HashLink to='/'>
+                <UDomain/>
+              </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>
