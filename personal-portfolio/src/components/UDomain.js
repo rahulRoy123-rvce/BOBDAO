@@ -14,7 +14,7 @@ export const UDomain = () => {
   }, [isLogin]);
 
   const uauth = new UAuth({
-    clientID: "1dbe95d7-dc99-443b-a07c-b7cc09da2e0a",
+    clientID: "5d8ef622-e570-43cb-99e4-e71b12167526",
     redirectUri: "https://bob-dao.vercel.app/",
   });
 
