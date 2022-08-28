@@ -56,8 +56,8 @@ function App() {
       {/* <UDomain/> */}
       <Banner />
       <Skills />
-      <Create/>
       <Projects />
+      <Create/>
       <Contact />
       <Footer />
     </div>

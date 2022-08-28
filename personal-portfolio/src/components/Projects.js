@@ -66,7 +66,7 @@ export const Projects = () => {
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      <Row>
+                      {/* <Row>
                         {
                           projects.map((project, index) => {
                             return (
@@ -77,13 +77,17 @@ export const Projects = () => {
                             )
                           })
                         }
-                      </Row>
+                      </Row> */}
+                    <img src="https://lh3.googleusercontent.com/mt4GBHyp-24TURTsjouA91Lo2jEJztp6kLUYGdnz9FIuUfCdywRgs-iBA3RZJuU0HOInF6UNOBdMf0lWgb-e-3HARoR6ttw1QyDUa4U=w600"></img>
+
+
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                    <img src="https://lh3.googleusercontent.com/NK5AN5NSqoWkFZEOckUxbzn66KVSqA2F13fFlIAlEJgHreAZCtmYYLn6NgD9OuHpcKR-_Tfb4RnVcOCRJIed1vbUEzw7De5YklkmXQ=w600"></img>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>All your projeects are displayed.</p>
+<img src="https://lh3.googleusercontent.com/wtxb3_WvJTNq_H6Vp5xF5_PxEQwVATxbabtbYhGSsdMkeYKfhNuw0-GsYdIirljhpGQuIWh8Fe4GbGFJ0CaY_i2_xSEe2HfEWQMcNQ=w600"></img>
+
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
