@@ -1,46 +1,49 @@
-import React, { useState } from "react"
-import UAuth from "@uauth/js"
+import React from 'react';
+import { useState, useEffect } from 'react';
+import UAuth from '@uauth/js';
 import { Button } from "react-bootstrap"
 
-const uauth = new UAuth({
+export const UDomain = () => {
+  const [isLogin, setIsLogin] = useState(false);
+  const [user, setUser] = useState();
+  const [walletAddress, setWalletAddress] = useState();
+
+  useEffect(() => {
+    // uauth();
+    return () => {};
+  }, [isLogin]);
+
+  const uauth = new UAuth({
     clientID: "1dbe95d7-dc99-443b-a07c-b7cc09da2e0a",
     redirectUri: "http://localhost:3000",
-})
+  });
 
-function UDomain() {
-    const [Uauth, setUauth] = useState()
+  const loginHandler = async () => {
+    setIsLogin(true);
+    try {
+      await uauth.loginWithPopup().then(() => uauth.user().then(setUser));
+      const accounts = await window.ethereum.request({
+        method: 'eth_requestAccounts',
+      });
+      console.log(accounts);
 
-    async function Connect() {
-        try {
-            const authorization = await uauth.loginWithPopup()
-            setUauth(JSON.parse(JSON.stringify(authorization))["idToken"])
-
-            await  authenticate()
-        } catch (error) {
-            console.error(error)
-        }
+      setIsLogin(true);
+      // setWalletAddress(user.wallet_address);
+      console.log(walletAddress);
+    } catch (error) {
+      console.error(error);
     }
+  };
 
-    async function logOut() {
-        uauth.logout()
-        logout()
-    }
-
-    function log() {
-        if (Uauth === null || Uauth === undefined) {
-            Connect()
-        } else {
-            logOut()
-        }
-    }
-
-    return (
-        <>
-            <Button onClick={log}>
-                {Uauth != null ? Uauth["sub"] : "Login with UDomain"}
+  return (
+    <>
+          <Button variant="primary"  onClick={loginHandler}>
+                {UAuth != null ? UAuth["sub"] : "Login with UDomain"}
             </Button>
-        </>
-    )
-}
+    </>
+  );
+};
+
+
 
 export default UDomain
