@@ -13,6 +13,7 @@
     "nodemailer": "^6.7.5",
     "react": "^18.1.0",
     "react-bootstrap": "^2.4.0",
+    "@uauth/web3-react": "^2.0.0",
     "react-bootstrap-icons": "^1.8.2",
     "react-dom": "^18.1.0",
     "react-mailchimp-subscribe": "^2.1.3",
