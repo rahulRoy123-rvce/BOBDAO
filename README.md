@@ -8,6 +8,7 @@
 4. npm start 
 5. Go to http://localhost:3000
 ######  Recorded video demo of the integration - https://youtu.be/WoW0iuGrQqA
+######  Live URL with working integration - https://bob-dao.vercel.app/
 ######  Person of contact in case there are any questions - Aviral Gupta (Email - guptaaviral59@gmail.com )
 ######  Discord ID - aviral23#0766
 ######  UnstoppableDomain registered account email address - guptaaviral59@gmail.com
