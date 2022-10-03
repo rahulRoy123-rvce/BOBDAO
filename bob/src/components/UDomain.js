@@ -37,7 +37,7 @@ export const UDomain = () => {
 
   return (
     <>
-          <Button variant="primary"  onClick={loginHandler}>
+          <Button  onClick={loginHandler}>Login
                 {UAuth != null ? UAuth["sub"] : "Login with UDomain"}
             </Button>
     </>
