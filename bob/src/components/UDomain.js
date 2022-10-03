@@ -3,47 +3,44 @@ import { useState, useEffect } from 'react';
 import UAuth from '@uauth/js';
 import { Button } from "react-bootstrap"
 
-export const UDomain = () => {
-  const [isLogin, setIsLogin] = useState(false);
-  const [user, setUser] = useState();
-  const [walletAddress, setWalletAddress] = useState();
-
-  useEffect(() => {
-    // uauth();
-    return () => {};
-  }, [isLogin]);
 
   const uauth = new UAuth({
     clientID: "5d8ef622-e570-43cb-99e4-e71b12167526",
     redirectUri: "https://bob-dao.vercel.app/",
   });
 
-  const loginHandler = async () => {
-    setIsLogin(true);
-    try {
-      await uauth.loginWithPopup().then(() => uauth.user().then(setUser));
-      const accounts = await window.ethereum.request({
-        method: 'eth_requestAccounts',
-      });
-      console.log(accounts);
 
-      setIsLogin(true);
-      // setWalletAddress(user.wallet_address);
-      console.log(walletAddress);
-    } catch (error) {
-      console.error(error);
+function UDomain() {
+    const [Uauth, setUauth] = useState()
+
+    async function Connect() {
+        try {
+            const authorization = await uauth.loginWithPopup()
+            setUauth(JSON.parse(JSON.stringify(authorization))["idToken"])
+
+            // await authenticate()
+        } catch (error) {
+            console.error(error)
+        }
     }
-  };
 
-  return (
-    <>
-          <Button  onClick={loginHandler}>Login
-                {UAuth != null ? UAuth["sub"] : "Login with UDomain"}
+    // async function logOut() {
+    //     uauth.logout()
+    //     logout()
+    // }
+
+    function log() {
+        if (Uauth === null || Uauth === undefined) {
+            Connect()
+        } 
+    }
+
+    return (
+        <>
+            <Button onClick={log}>
+                {Uauth != null ? Uauth["sub"] : "Login with UNSD"}
             </Button>
-    </>
-  );
-};
-
-
-
+        </>
+    )
+}
 export default UDomain
