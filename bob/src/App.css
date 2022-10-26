@@ -160,9 +160,10 @@ span.navbar-text {
 	position: relative;
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
+  z-index: 1;
 }
 .navbar-text button span {
-  z-index: 1;
+  z-index: 2;
 }
 .navbar-text button::before {
   content: "";
@@ -172,7 +173,7 @@ span.navbar-text {
   background-color: #fff;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: 1;
   transition: 0.3s ease-in-out;
 }
 .navbar-text button:hover {

@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer";
 
 
 import Create from './Create'
+import Portfolio from './components/Portfolio';
 
 // import MarketplaceAbi from '../contractsData/Marketplace.json'
 // import MarketplaceAddress from '../contractsData/Marketplace-address.json'
@@ -57,7 +58,8 @@ function App() {
       <Banner />
       <Skills />
       <Projects />
-      <Create/>
+      <Create />
+      <Portfolio/>
       <Contact />
       <Footer />
     </div>

@@ -36,6 +36,7 @@ export const NavBar = () => {
   return (
 <>
 <Router>
+  
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
@@ -49,17 +50,11 @@ export const NavBar = () => {
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>About</Nav.Link>
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Profile</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Discord</Nav.Link>
+              <UDomain/>
             </Nav>
-            <span className="navbar-text">
-              <div className="social-icon">
-              {/* <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a> */}
-              </div>
-              <HashLink to='/'>
-                <UDomain/>
-              </HashLink>
-            </span>
+          
+             
+            
           </Navbar.Collapse>
         </Container>
       </Navbar>
